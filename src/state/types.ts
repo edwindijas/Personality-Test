@@ -1,3 +1,4 @@
+import { Language } from "i18n/types";
 import { Question } from "models/types";
 import { Pages } from "pages/types";
 import React, { Dispatch } from "react";
@@ -9,6 +10,7 @@ export interface AppStateProviderProps {
 
 export interface AppState {
     page: Pages,
+    lang: Language,
     questions: {
         data: Question[],
         currentQuestion?: number
