@@ -3,6 +3,7 @@ import { HomePage } from "pages/home/HomePage";
 import { ResultPage } from "pages/result/ResultPage";
 import { TestPage } from "pages/test/TestPage";
 import { Page } from "pages/types";
+import { PageEle } from "./Router.style";
 
 const Pages: { [key in Page]: () => JSX.Element } = {
     home: HomePage,
@@ -14,7 +15,7 @@ const Pages: { [key in Page]: () => JSX.Element } = {
 export const Router = () => {
     const { state } = useAppState();
     const Page = Pages[state.page];
-    return <div >
+    return <PageEle >
         <Page />
-    </div>
+    </PageEle>
 }
