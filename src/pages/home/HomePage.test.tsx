@@ -8,9 +8,25 @@ beforeEach(() => {
 })
 
 
-describe('Home Page', () => {
-    it ('renders page correctly', () => {
+describe('Home Page renders ', () => {
+    it ('page correctly', () => {
         const { getByTestId } = container;
         expect(getByTestId(BASE_TEST_ID)).toBeInTheDocument()
     })
+
+    it ('button next', () => {
+        const { getByTestId } = container;
+        expect(getByTestId(BASE_TEST_ID + '-btn-next')).toBeInTheDocument()
+    })
+
+    it ('title', () => {
+        const { getByTestId } = container;
+        expect(getByTestId(BASE_TEST_ID + '-title')).toBeInTheDocument()
+    })
+
+    it ('subtitle', () => {
+        const { getByTestId } = container;
+        expect(getByTestId(BASE_TEST_ID + '-subtitle')).toBeInTheDocument()
+    })
+
 })
