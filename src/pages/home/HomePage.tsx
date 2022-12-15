@@ -14,7 +14,6 @@ export const Home = () => {
     const { dispatch } = useAppState();
 
     const goToNextPage = () => {
-        console.log('Moving to page')
         dispatch({ store: 'page', type: 'change', payload: { page: 'test' } })
     }
 
