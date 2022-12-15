@@ -1,12 +1,14 @@
 import React from 'react';
+import { Router } from 'router/Router';
+import { AppStateProvider } from 'state/AppStateProvider';
 import GlobalCss from 'styles/global'
 
 function App() {
   return (
-    <div className="App">
+    <AppStateProvider >
       <GlobalCss />
-      Personallity Test
-    </div>
+      <Router />
+    </AppStateProvider>
   );
 }
 
