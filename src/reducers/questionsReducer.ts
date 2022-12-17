@@ -5,6 +5,8 @@ import { QuestionAnswerAction, QuestionsAddAllAction, QuestionsReducer } from ".
 
 export const answerQuestion = (state: AppState, action: QuestionAnswerAction): AppState => {
     return produce(state, (draft) => {
+        const questionIndex = draft.questions.data.findIndex((item) => item.id === action.payload.questionId);
+        draft.questions.data[questionIndex].selectedAnswer = action.payload.answerId
         return draft;
     })
 }
