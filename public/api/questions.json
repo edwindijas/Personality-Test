@@ -5,22 +5,22 @@
             "answers": [
                 {
                     "label": "Don’t dare to interrupt them",
-                    "value": 0
+                    "value": -1
             
                 },
                 {
                     "label": "Think it’s more important to give them some of your time; work can wait",
-                    "value": 0
+                    "value": 1
             
                 },
                 {
                     "label": "Listen, but with only with half an ear",
-                    "value": 0
+                    "value": -1
             
                 },
                 {
                     "label": "Interrupt and explain that you are really busy at the moment",
-                    "value": 0
+                    "value": 1
             
                 }
             ]
@@ -30,22 +30,22 @@
             "answers": [
                 {
                     "label": "Look at your watch every two minutes",
-                    "value": 0
+                    "value": -1
             
                 },
                 {
                     "label": "Bubble with inner anger, but keep quiet",
-                    "value": 0
+                    "value": -1
             
                 },
                 {
                     "label": "Explain to other equally impatient people in the room that the doctor is always running late",
-                    "value": 0
+                    "value": 1
             
                 },
                 {
                     "label": "Complain in a loud voice, while tapping your foot impatiently",
-                    "value": 0
+                    "value": 1
             
                 }
             ]
@@ -54,22 +54,22 @@
             "answers": [
                 {
                     "label": "Don’t dare contradict them",
-                    "value": 0
+                    "value": -1
             
                 },
                 {
                     "label": "Think that they are obviously right",
-                    "value": 0
+                    "value": -1
             
                 },
                 {
                     "label": "Defend your own point of view, tooth and nail",
-                    "value": 0
+                    "value": 1
             
                 },
                 {
                     "label": "Continuously interrupt your colleague ",
-                    "value": 0
+                    "value": 1
             
                 }
             ]
@@ -79,22 +79,22 @@
             "answers": [
                 {
                     "label": "Are a bit too far towards the back so don’t really hear what the guide is saying ",
-                    "value": 0
+                    "value": -1
             
                 },
                 {
                     "label": "Follow the group without question",
-                    "value": 0
+                    "value": -1
             
                 },
                 {
                     "label": "Make sure that everyone is able to hear properly",
-                    "value": 0
+                    "value": 1
             
                 },
                 {
                     "label": "Are right up the front, adding your own comments in a loud voice",
-                    "value": 0
+                    "value": 1
             
                 }
             ]
@@ -105,22 +105,22 @@
             "answers": [
                 {
                     "label": "Ask you to tell a story in front of everyone else",
-                    "value": 0
+                    "value": -1
             
                 },
                 {
                     "label": "Talk privately between themselves",
-                    "value": 0
+                    "value": 1
             
                 },
                 {
                     "label": "Hang around you all evening",
-                    "value": 0
+                    "value": -1
             
                 },
                 {
                     "label": "Always drag the conversation back to themselves ",
-                    "value": 0
+                    "value": 1
             
                 }
             ]
