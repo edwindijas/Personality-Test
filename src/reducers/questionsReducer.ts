@@ -1,5 +1,4 @@
 import produce from "immer";
-import { Question } from "models/types";
 import { AppState } from "state/types";
 import { QuestionAnswerAction, QuestionsAddAllAction, QuestionsReducer, QuestionsResetAction } from "./types";
 
@@ -21,8 +20,11 @@ export const addQuestions = (state: AppState, action: QuestionsAddAllAction): Ap
 export const resetAnswers = (state: AppState, action: QuestionsResetAction): AppState => {
     return produce(state, (draft) => {
 
-        draft.questions.data.map(question => question.selectedAnswer = undefined);
-
+        draft.questions.data = draft.questions.data.map((question) => 
+        {
+            question.selectedAnswer = undefined
+            return question;
+        });
         return draft;
     })
 }
@@ -33,7 +35,10 @@ export const questionsReducer = (state: AppState, action: QuestionsReducer): App
         case 'answer':
             return answerQuestion(state, action);
         case 'addAll':
-            return addQuestions(state, action)
+            return addQuestions(state, action);
+
+        case 'reset':
+            return resetAnswers(state, action)
     }
     return state;
 }
