@@ -7,11 +7,15 @@ import { useLanguage } from "hooks/useLanguage"
 
 const BASE_TEST_ID = 'question'
 
-export const Question = ({ question }: QuestionProps) => {
+export const Question = ({ question, readonly }: QuestionProps) => {
     const {dispatch} = useAppState();
     const [currentAnswer, setCurrentAnswer] = useState(question.selectedAnswer)
     const { components: { questions: lang } } = useLanguage();
     const selectAns = (answerId: string) => {
+        if (readonly) {
+            return;
+        }
+        
         const questionId = question.id;
         setCurrentAnswer(answerId);
         dispatch && dispatch({

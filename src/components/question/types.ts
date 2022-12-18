@@ -11,4 +11,5 @@ export interface AnswerProps {
 
 export interface QuestionProps {
     question: Question;
+    readonly?: true
 }
