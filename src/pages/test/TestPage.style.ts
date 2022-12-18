@@ -25,7 +25,7 @@ export const  BtnPrev = styled.button`
 
     justify-content: center;
 
-    @media all and (max-width: 25em) {
+    @media all and (max-width: 35em) {
         margin-right: 0;
         margin-bottom: 0.5em;
         width: 100%;
@@ -47,7 +47,7 @@ export const BtnNext = styled(BtnPrev)`
     color: #fff;
     margin-right: 0;
     background-color: #1E1E1E;
-    @media all and (max-width: 40em) {
+    @media all and (max-width: 35em) {
         margin-bottom: 0;
         width: 100%;
     }
