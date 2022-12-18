@@ -7,7 +7,9 @@ const home: PageLanguage = {
 }
 
 const test: PageLanguage = {
-    title: 'question'
+    title: 'question',
+    btnNext: 'Next Question',
+    btnPrev: 'Prev Question'
 }
 
 const result: PageLanguage = {
@@ -16,10 +18,17 @@ const result: PageLanguage = {
     btnShowAnswers: 'Show My Answers'
 }
 
+const questions: PageLanguage = {
+    allRequired: 'All questions are required'
+}
+
 export const english: Language = {
     page: {
         home,
         test,
-        result
+        result,
+        components: {
+            questions
+        }
     }
 }

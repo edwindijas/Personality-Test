@@ -7,5 +7,8 @@ export interface Language {
         home: PageLanguage,
         test: PageLanguage,
         result: PageLanguage
+        components: {
+            questions: PageLanguage
+        }
     }
 }
