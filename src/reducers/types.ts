@@ -20,6 +20,10 @@ export interface QuestionsAddAllAction extends QuestionBasicReducer {
     }
 }
 
+export interface QuestionsResetAction extends QuestionBasicReducer {
+    type: 'reset'
+}
+
 export interface PageChangeAction {
     store: 'page';
     type: 'change'
@@ -30,6 +34,6 @@ export interface PageChangeAction {
 
 export type PagesReducer = PageChangeAction
 
-export type QuestionsReducer = QuestionAnswerAction | QuestionsAddAllAction;
+export type QuestionsReducer = QuestionAnswerAction | QuestionsAddAllAction | QuestionsResetAction;
 
 export type AppStateReducerAction = QuestionsReducer | PagesReducer
