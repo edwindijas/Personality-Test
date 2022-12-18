@@ -6,4 +6,6 @@ export const PageEle = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2em 0;
+    flex-wrap: wrap;
 `

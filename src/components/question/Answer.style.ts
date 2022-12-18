@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
     border-radius: 0.5em;
     display: flex;
     align-items: center;
-
+    transition: background-color .5s, color .5s;
     ${({active}: {active: boolean}) => `
         font-weight: ${ active ? '600' : 'normal' };;
         color: #${ active ? '000' : '625D4B' };
@@ -15,11 +15,12 @@ export const Wrapper = styled.div`
         border: 1px solid #${ active ? 'CE9728' : 'D5CDBE' };
     `}
 
-    
 `
 
 export const AnsWrap = styled.p`
     width: calc(100% - 1.5em);
+    display: flex;
+    align-items: center;
 `
 
 export const Tick = styled.figure`
