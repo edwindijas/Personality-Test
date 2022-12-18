@@ -12,7 +12,7 @@ export const Question = ({ question, readonly }: QuestionProps) => {
     const [currentAnswer, setCurrentAnswer] = useState(question.selectedAnswer)
     const { components: { questions: lang } } = useLanguage();
     const selectAns = (answerId: string) => {
-        if (readonly) {
+        if (readonly || !setCurrentAnswer) {
             return;
         }
         
