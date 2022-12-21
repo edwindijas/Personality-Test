@@ -10,7 +10,7 @@ import { ResultPageProps } from "./types";
 
 const BASE_TEST_ID = 'result-page';
 
-export const ResultPage = ({ questions }: ResultPageProps) => {
+export const ResultPage = ({ questions }: ResultPageProps = {}) => {
 
     const [showResults, setShowResults] = useState(false);
     const { dispatch, state } = useAppState();
