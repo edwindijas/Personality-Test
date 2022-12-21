@@ -34,8 +34,6 @@ export const Question = ({ question, readonly }: QuestionProps) => {
         })
     }
 
-    console.log(currentAnswer)
-
     return <QuestEle.Wrapper data-testid={BASE_TEST_ID} >
         <QuestEle.Title data-testid='title' >{ question.title }</QuestEle.Title>
         <QuestEle.Req >{ lang.allRequired }</QuestEle.Req>
