@@ -2,18 +2,20 @@ import { IcoPrev } from "assets/icons/IcoPrev";
 import { IcoRestart } from "assets/icons/IcoRestart";
 import { Question as QuestionEle } from "components/question/Question";
 import { useAppState } from "hooks/useAppState";
+import { useLanguage } from "hooks/useLanguage";
 import { Question } from "models/types";
 import { useState } from "react";
 import * as ResultEle from './Results.style'
+import { ResultPageProps } from "./types";
 
 const BASE_TEST_ID = 'result-page';
 
-export const ResultPage = () => {
+export const ResultPage = ({ questions }: ResultPageProps) => {
 
     const [showResults, setShowResults] = useState(false);
     const { dispatch, state } = useAppState();
     
-    const lang = state.lang.page.result;
+    const {result: lang} = useLanguage();
 
     const restartTest = () => {
         dispatch({ store: 'question', type: 'reset' })
@@ -26,7 +28,15 @@ export const ResultPage = () => {
 
     let result = 0;
 
-    state.questions.data.forEach((question) => {
+    let availableQuestions: Question[] = [];
+
+    if (state) {
+        availableQuestions = state.questions.data;
+    } else if (questions) {
+        availableQuestions = questions;
+    }
+    
+    availableQuestions.forEach((question) => {
         const { selectedAnswer } = question;
         const value = question.answers.find((answer) => answer.id === selectedAnswer);
         if (!value) {
