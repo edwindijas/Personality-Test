@@ -1,5 +1,5 @@
 import { useAppState } from "hooks/useAppState"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Answer } from "./Answer"
 import { QuestionProps } from "./types"
 import * as QuestEle from "./Question.style"
@@ -9,7 +9,13 @@ const BASE_TEST_ID = 'question'
 
 export const Question = ({ question, readonly }: QuestionProps) => {
     const {dispatch} = useAppState();
-    const [currentAnswer, setCurrentAnswer] = useState(question.selectedAnswer)
+    const [currentAnswer, setCurrentAnswer] = useState(question.selectedAnswer);
+
+
+    useEffect(() => {
+        setCurrentAnswer(question.selectedAnswer);
+    }, [question])
+
     const { components: { questions: lang } } = useLanguage();
     const selectAns = (answerId: string) => {
         if (readonly || !setCurrentAnswer) {
@@ -27,6 +33,8 @@ export const Question = ({ question, readonly }: QuestionProps) => {
             }
         })
     }
+
+    console.log(currentAnswer)
 
     return <QuestEle.Wrapper data-testid={BASE_TEST_ID} >
         <QuestEle.Title data-testid='title' >{ question.title }</QuestEle.Title>
